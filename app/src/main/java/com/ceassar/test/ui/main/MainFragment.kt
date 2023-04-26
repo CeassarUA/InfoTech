@@ -1,18 +1,31 @@
 package com.ceassar.test.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.ceassar.test.R
+import androidx.core.widget.doOnTextChanged
+import androidx.navigation.fragment.findNavController
 import com.ceassar.test.databinding.FragmentMainBinding
 import com.ceassar.test.ui.base.BaseFragment
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
-    val adapter = ListAdapter()
-    override fun initialization(view: View, savedInstanceState: Bundle?) {
-
+    private val adapter = ListAdapter {
+        findNavController()//TODO
     }
+    override val viewModel: MainViewModel by viewModel()
+    override fun initialization(view: View, savedInstanceState: Bundle?) {
+        safeBind {
+
+            rvList.adapter = adapter
+            viewModel.cityLive.observe(viewLifecycleOwner) {
+                adapter.submitData(lifecycle, it)
+            }
+
+        }
+    }
+
+    override fun FragmentMainBinding.dataBind() {
+        viewmodel = viewModel
+    }
+
 }

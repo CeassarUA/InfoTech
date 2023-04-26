@@ -5,17 +5,34 @@
 
     tools:context=".ui.main.MainFragment">
 
-    <FrameLayout
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ceassar.test.ui.main.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewmodel.text}"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search" />
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </layout>

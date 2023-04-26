@@ -95,6 +95,7 @@ abstract class BaseFragment<VBinding : ViewDataBinding>(
     ): View? {
         return bind(inflater, container)
     }
+
     private fun bind(inflater: LayoutInflater, container: ViewGroup?): View? {
         viewDataBinding = bindFactory(inflater, container, false).also {
             it.setLifecycleOwner {

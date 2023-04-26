@@ -46,9 +46,11 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation "androidx.paging:paging-runtime-ktx:3.2.0-alpha04"
+    implementation "androidx.work:work-runtime-ktx:2.8.1"
 
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //rxbinding
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+
 
 
     //co,
@@ -64,8 +66,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
 
 
-
-
     //koin dependency injection
     implementation "io.insert-koin:koin-core:3.2.0"
     implementation "io.insert-koin:koin-android:3.2.0"
@@ -76,8 +76,9 @@ dependencies {
     implementation "androidx.room:room-paging:2.5.1"
     implementation "androidx.room:room-ktx:2.5.1"
 
-    //Glide
+
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     //Network
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
