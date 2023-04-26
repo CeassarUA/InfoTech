@@ -6,6 +6,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.ceassar.test.data.datasource.model.CityEntity
 
 @Dao
 interface CityDao {
@@ -15,9 +16,6 @@ interface CityDao {
 
     @Query("SELECT * FROM city WHERE name like :text")
     fun getPaging(text: String): PagingSource<Int, CityEntity>
-
-    @Query("SELECT * FROM city WHERE name like :text order by name")
-    fun getDatasource(text: String): DataSource.Factory<Int, CityEntity>
 
     @Query("SELECT * FROM city")
     fun getDatasource(): PagingSource<Int, CityEntity>

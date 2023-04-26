@@ -5,7 +5,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.ceassar.test.data.datasource.local.CityRepository
+import com.ceassar.test.data.datasource.repository.CityRepository
 import com.ceassar.test.ui.base.BaseViewModel
 
 

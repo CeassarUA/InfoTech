@@ -10,7 +10,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
     private val adapter = ListAdapter {
-        findNavController()//TODO
+        findNavController().navigate(MainFragmentDirections.actionMainFragmentToMapsFragment(it))
     }
     override val viewModel: MainViewModel by viewModel()
     override fun initialization(view: View, savedInstanceState: Bundle?) {

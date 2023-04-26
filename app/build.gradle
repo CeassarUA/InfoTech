@@ -4,6 +4,7 @@ plugins {
     id 'kotlinx-serialization'
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 apply plugin: 'kotlin-kapt'
@@ -13,7 +14,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.ceassar.testApp"
+        applicationId "com.ceassar.test"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -72,6 +73,7 @@ dependencies {
 //Room
     implementation "androidx.room:room-runtime:2.5.1"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
     kapt "androidx.room:room-compiler:2.5.1"
     implementation "androidx.room:room-paging:2.5.1"
     implementation "androidx.room:room-ktx:2.5.1"

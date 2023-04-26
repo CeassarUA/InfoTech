@@ -8,5 +8,19 @@
         android:id="@+id/mainFragment"
         android:name="com.ceassar.test.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.ceassar.test.ui.details.DetailsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps">
+        <argument
+            android:name="dto"
+            app:argType="com.ceassar.test.data.datasource.model.CityEntity"
+            app:nullable="false" />
+    </fragment>
 </navigation>

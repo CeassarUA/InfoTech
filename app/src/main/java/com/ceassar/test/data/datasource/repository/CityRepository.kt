@@ -1,11 +1,11 @@
-package com.ceassar.test.data.datasource.local
+package com.ceassar.test.data.datasource.repository
 
 import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.ceassar.test.data.datasource.local.database.AppDatabase
-import com.ceassar.test.data.datasource.local.database.CityEntity
+import com.ceassar.test.data.datasource.model.CityEntity
 import kotlinx.coroutines.flow.Flow
 
 
@@ -18,21 +18,12 @@ class CityRepository(
         Log.d("Repository", "New query: $query")
         return Pager(
             config = PagingConfig(
-                pageSize = 10,
+
+                prefetchDistance = 100,
+                pageSize = 50,
                 enablePlaceholders = false
             ),
             pagingSourceFactory = { dao.getPaging("%$query%") }
-        ).flow
-    }
-
-    fun getSearchResultStream(): Flow<PagingData<CityEntity>> {
-        Log.d("Repository", "get All")
-        return Pager(
-            config = PagingConfig(
-                pageSize = 10,
-                enablePlaceholders = false
-            ),
-            pagingSourceFactory = { dao.getDatasource() }
         ).flow
     }
 

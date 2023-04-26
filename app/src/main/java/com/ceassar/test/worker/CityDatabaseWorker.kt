@@ -22,7 +22,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.ceassar.test.R
 import com.ceassar.test.data.datasource.local.database.AppDatabase
-import com.ceassar.test.data.datasource.local.database.CityEntity
+import com.ceassar.test.data.datasource.model.CityEntity
 import com.google.gson.Gson
 import com.google.gson.stream.JsonReader
 import kotlinx.coroutines.Dispatchers

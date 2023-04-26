@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.details.DetailsFragment" />
+
+        <TextView
+            android:id="@+id/t_describe"
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/describe"
+            app:layout_constraintTop_toBottomOf="@+id/map" />
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/describe"
+            app:layout_constraintTop_toBottomOf="@+id/t_describe" />
+
+        <TextView
+            android:id="@+id/t_current"
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/t_current"
+            app:layout_constraintTop_toBottomOf="@+id/tv_describe" />
+
+        <TextView
+            android:id="@+id/tv_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/t_current"
+            tools:text="@string/describe" />
+
+        <TextView
+            android:id="@+id/t_min_max"
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/min_max"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current" />
+
+        <TextView
+            android:id="@+id/tv_min_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/t_min_max"
+            tools:text="@string/describe" />
+
+        <TextView
+            android:id="@+id/t_humidity"
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_max" />
+
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/t_humidity"
+            tools:text="@string/describe" />
+
+        <TextView
+            android:id="@+id/t_wind"
+            style="@style/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wind"
+            app:layout_constraintTop_toBottomOf="@+id/tv_humidity" />
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/t_wind"
+            tools:text="@string/describe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

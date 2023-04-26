@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="describe">Опис</string>
+    <string name="t_current">Поточна температура повітря</string>
+    <string name="min_max">Мін., макс. температура повітря</string>
+    <string name="humidity">Вологість повітря</string>
+    <string name="wind">Швидкість вітру</string>
+</resources>

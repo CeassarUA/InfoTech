@@ -17,8 +17,8 @@
 package com.ceassar.test.data.datasource.local.database
 
 import androidx.room.TypeConverter
+import com.ceassar.test.data.datasource.model.CityEntity
 import com.google.gson.Gson
-import java.util.Calendar
 
 /**
  * Type converters to allow Room to reference complex data types.

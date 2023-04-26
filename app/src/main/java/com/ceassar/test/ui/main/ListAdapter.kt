@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.ceassar.test.R
-import com.ceassar.test.data.datasource.local.database.CityEntity
+import com.ceassar.test.data.datasource.model.CityEntity
 import com.ceassar.test.databinding.ItemCityListBinding
 
 class ListAdapter(val onItemClick: (CityEntity) -> Unit) :
